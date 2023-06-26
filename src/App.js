@@ -7,6 +7,8 @@ import CharacterCounter from "./Components/CharacterCounter";
 import Todo from "./Components/Todo";
 import ColorSwitcher from "./Components/ColorSwitcher";
 import SearchFilter from "./Components/SearchFilter";
+import Countdown from './Components/Countdown'
+import ConsoleBoom from "./Components/ConsoleBoom";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/todo" element={<Todo />} />
             <Route path="/switcher" element={<ColorSwitcher />} />
             <Route path="/search" element={<SearchFilter />} />
+            <Route path="/countdown" element={<Countdown />} />
+            <Route path="/boom" element={<ConsoleBoom />} />
           </Routes>
         </div>
       </Router>
