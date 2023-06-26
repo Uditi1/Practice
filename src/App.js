@@ -9,6 +9,7 @@ import ColorSwitcher from "./Components/ColorSwitcher";
 import SearchFilter from "./Components/SearchFilter";
 import Countdown from './Components/Countdown'
 import ConsoleBoom from "./Components/ConsoleBoom";
+import Timeupdate from "./Components/Timeupdate";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/search" element={<SearchFilter />} />
             <Route path="/countdown" element={<Countdown />} />
             <Route path="/boom" element={<ConsoleBoom />} />
+            <Route path="/time" element={<Timeupdate />} />
           </Routes>
         </div>
       </Router>
