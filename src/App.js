@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Counter from "./Components/Counter";
 import ControlInput from "./Components/ControlInput";
 import ToggleVisiblity from "./Components/ToggleVisiblity";
+import CharacterCounter from "./Components/CharacterCounter";
+import Todo from "./Components/Todo";
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
             <Route path="/" element={<Counter />} />
             <Route path="/controlinput" element={<ControlInput />} />
             <Route path="/toggle" element={<ToggleVisiblity />} />
-            
+            <Route path="/character" element={<CharacterCounter />} />
+            <Route path="/todo" element={<Todo />} />
           </Routes>
         </div>
       </Router>
