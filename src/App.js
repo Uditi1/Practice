@@ -6,6 +6,7 @@ import ToggleVisiblity from "./Components/ToggleVisiblity";
 import CharacterCounter from "./Components/CharacterCounter";
 import Todo from "./Components/Todo";
 import ColorSwitcher from "./Components/ColorSwitcher";
+import SearchFilter from "./Components/SearchFilter";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             <Route path="/toggle" element={<ToggleVisiblity />} />
             <Route path="/character" element={<CharacterCounter />} />
             <Route path="/todo" element={<Todo />} />
-            <Route path="switcher" element={<ColorSwitcher />}
+            <Route path="/switcher" element={<ColorSwitcher />} />
+            <Route path="search" element={<SearchFilter />} />
           </Routes>
         </div>
       </Router>
