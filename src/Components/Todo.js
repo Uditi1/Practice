@@ -1,15 +1,55 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Todo = () => {
+    const [todo, setTodo] = useState([]);
+
+    const [inputValue, setInputValue] = useState('');
+
+  function handleInputChange(event) {
+
+    setInputValue(event.target.value);
+  
+  }
+
+  function handleSubmit() {
+
+    if (inputValue.trim()) {
+  
+      setTodo([...todo, inputValue.trim()]);
+  
+      setInputValue('');
+  
+    }
+  
+  }
+
+  function handleDelete(index) {
+
+    setTodo(todo.filter((_, i) => i !== index));
+  
+  }
+
   return (
     <div>
-      <input type="text" />
-      <button>Add Todo</button>
+     <input type="text" value={inputValue} onChange={handleInputChange} />
+      <button onClick={handleSubmit}>Add Todo</button>
       <ul>
-        {/* Render the list of todo items here */}
-      </ul>
-    </div>
-  )
-}
 
-export default Todo
+  {todo.map((todos, index) => (
+
+    <li key={index}>
+
+      {todos}
+
+      <button onClick={() => handleDelete(index)}>Delete</button>
+
+    </li>
+
+  ))}
+
+</ul>
+    </div>
+  );
+};
+
+export default Todo;
