@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ControlInput = () => {
+
+    const [updateText , setupdateText] = useState(" ")
+
+    const handleChange = (event) => {
+        setupdateText(event.target.value)
+    }
+
   return (
     <div>
-      <input type="text" />
-      <p>Input text: TODO</p>
+        <div>
+        <input type="text" value={updateText} onChange={handleChange}/>
+        </div>
+
+      <p>Input text: {updateText}</p>
+      
     </div>
   );
 };
