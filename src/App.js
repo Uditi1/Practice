@@ -20,7 +20,7 @@ function App() {
             <Route path="/character" element={<CharacterCounter />} />
             <Route path="/todo" element={<Todo />} />
             <Route path="/switcher" element={<ColorSwitcher />} />
-            <Route path="search" element={<SearchFilter />} />
+            <Route path="/search" element={<SearchFilter />} />
           </Routes>
         </div>
       </Router>
